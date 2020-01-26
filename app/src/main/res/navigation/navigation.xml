@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/enterGameFragment">
+
+    <fragment
+        android:id="@+id/enterGameFragment"
+        android:name="be.brussel.boujdainiahmed.teampokemon.home.EnterGameFragment"
+        android:label="fragment_enter_game"
+        tools:layout="@layout/fragment_enter_game" >
+        <action
+            android:id="@+id/action_enterGameFragment_to_pokemonListFragment"
+            app:destination="@id/pokemonListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pokemonListFragment"
+        android:name="be.brussel.boujdainiahmed.teampokemon.pokeList.PokemonListFragment"
+        android:label="fragment_pokemon_list"
+        tools:layout="@layout/fragment_pokemon_list" >
+        <action
+            android:id="@+id/action_pokemonListFragment_to_teamFragment"
+            app:destination="@id/teamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamFragment"
+        android:name="be.brussel.boujdainiahmed.teampokemon.team.TeamFragment"
+        android:label="fragment_team"
+        tools:layout="@layout/fragment_team" >
+
+    <!-- <argument android:name="selectedPokemon"
+        app:argType="be.brussel.boujdainiahmed.teampokemon.pokeList.Pokemon"/> -->
+    </fragment>
+
+</navigation>
+
+
